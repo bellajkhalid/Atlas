@@ -26,9 +26,11 @@ use sc_service::PartialComponents;
 
 impl SubstrateCli for Cli {
 	fn impl_name() -> String {
-		"Frontier Node".into()
+		"Atlas Node".into()
 	}
-
+	fn author() -> String {
+		"Mchain Company".into()
+	}
 	fn impl_version() -> String {
 		env!("SUBSTRATE_CLI_IMPL_VERSION").into()
 	}
@@ -37,16 +39,12 @@ impl SubstrateCli for Cli {
 		env!("CARGO_PKG_DESCRIPTION").into()
 	}
 
-	fn author() -> String {
-		env!("CARGO_PKG_AUTHORS").into()
-	}
-
 	fn support_url() -> String {
 		"support.anonymous.an".into()
 	}
 
 	fn copyright_start_year() -> i32 {
-		2021
+		2023
 	}
 
 	fn load_spec(&self, id: &str) -> Result<Box<dyn sc_service::ChainSpec>, String> {
